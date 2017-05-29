@@ -40,10 +40,6 @@ public:
         
         bool result = isCharMatch(a,b);
 
-        if(a == str.length()-1 && b == pattern.length()-3 && pattern[b+2]=='*'){
-            return result;
-        }
-
         if(pattern[b] == '*'){
             if(result && dfs(a+1,b))
                 return true;
